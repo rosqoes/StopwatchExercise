@@ -13,10 +13,10 @@ class Watch: ObservableObject {
     @Published var remainingTime: Int = 1500
     @Published var time: String = "25:00"
     
-    private var cancellable: AnyCancellable? = .none
+    var cancellable: AnyCancellable? = .none
     private let timerPublisher = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect().eraseToAnyPublisher()
     
-    private func start() {
+    func start() {
         isStarted.toggle()
         cancellable = timerPublisher
             .sink { _ in
@@ -28,7 +28,7 @@ class Watch: ObservableObject {
             }
     }
 
-    private func pause() {
+    func pause() {
         isStarted.toggle()
         cancellable = .none
     }
