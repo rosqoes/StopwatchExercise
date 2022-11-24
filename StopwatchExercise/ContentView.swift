@@ -9,7 +9,8 @@ import SwiftUI
 import Combine
 
 struct ContentView: View {
-
+    @ObservedObject var watch: Watch
+    
     @State private var time: String = "25:00"
     @State private var remainingTime: Int = 1500
     @State private var isStarted: Bool = false
@@ -63,6 +64,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(watch: Watch())
     }
 }

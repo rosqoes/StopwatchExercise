@@ -12,7 +12,7 @@ struct StopwatchExerciseApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(watch: Watch())
         }
     }
 }
