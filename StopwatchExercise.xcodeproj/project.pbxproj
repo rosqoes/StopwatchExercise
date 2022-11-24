@@ -13,6 +13,7 @@
 		56A7E24C2923CBA400EB64AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56A7E24B2923CBA400EB64AC /* Preview Assets.xcassets */; };
 		56A7E2592923CBEC00EB64AC /* StopwatchExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7E2582923CBEC00EB64AC /* StopwatchExerciseTests.swift */; };
 		56A7E2602923D21F00EB64AC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 56A7E25F2923D21F00EB64AC /* README.md */; };
+		FA29F273292FC749000D9327 /* Watch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29F272292FC749000D9327 /* Watch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		56A7E2562923CBEC00EB64AC /* StopwatchExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StopwatchExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56A7E2582923CBEC00EB64AC /* StopwatchExerciseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchExerciseTests.swift; sourceTree = "<group>"; };
 		56A7E25F2923D21F00EB64AC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FA29F272292FC749000D9327 /* Watch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			children = (
 				56A7E2442923CBA300EB64AC /* StopwatchExerciseApp.swift */,
 				56A7E2462923CBA300EB64AC /* ContentView.swift */,
+				FA29F272292FC749000D9327 /* Watch.swift */,
 				56A7E2482923CBA400EB64AC /* Assets.xcassets */,
 				56A7E24A2923CBA400EB64AC /* Preview Content */,
 			);
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56A7E2472923CBA300EB64AC /* ContentView.swift in Sources */,
+				FA29F273292FC749000D9327 /* Watch.swift in Sources */,
 				56A7E2452923CBA300EB64AC /* StopwatchExerciseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
