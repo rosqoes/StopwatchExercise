@@ -10,8 +10,6 @@ import Combine
 
 struct ContentView: View {
     @ObservedObject var watch: Watch
-    
-    private let timerPublisher = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect().eraseToAnyPublisher()
 
     var body: some View {
         VStack(spacing: 30) {
@@ -28,6 +26,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(watch: Watch())
+        ContentView(watch: Watch(timerPublisher: Timer.publish(every: 1.0, on: .main, in: .common).autoconnect().eraseToAnyPublisher()))
     }
 }
