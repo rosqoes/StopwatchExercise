@@ -8,16 +8,19 @@
 import Foundation
 import Combine
 
-class Watch: ObservableObject {
+class WatchViewModel: ObservableObject {
     @Published var isStarted: Bool = false
-    @Published var remainingTime: Int = 1500
+    @Published var remainingTime: Int
     @Published var time: String = "25:00"
     
     private var timerPublisher = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect().eraseToAnyPublisher()
     private var cancellable: AnyCancellable? = .none
+    private let initialTime: Int
     
-    init(timerPublisher: AnyPublisher<Publishers.Autoconnect<Timer.TimerPublisher>.Output, Publishers.Autoconnect<Timer.TimerPublisher>.Failure>) {
+    init(timerPublisher: AnyPublisher<Date, Never>, duration: Int) {
         self.timerPublisher = timerPublisher
+        self.remainingTime = duration
+        self.initialTime = duration
     }
     
     func start() {
@@ -38,8 +41,8 @@ class Watch: ObservableObject {
     }
 
     private func reset() {
-        time = "25:00"
-        remainingTime = 1500
+        time = convertIntToStringDate(timeInSecond: initialTime)
+        remainingTime = initialTime
         isStarted = false
         cancellable = .none
     }

@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 struct ContentView: View {
-    @ObservedObject var watch: Watch
+    @ObservedObject var watch: WatchViewModel
 
     var body: some View {
         VStack(spacing: 30) {
@@ -26,6 +26,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(watch: Watch(timerPublisher: Timer.publish(every: 1.0, on: .main, in: .common).autoconnect().eraseToAnyPublisher()))
+        ContentView(watch: WatchViewModel(timerPublisher: Timer.publish(every: 1.0, on: .main, in: .common).autoconnect().eraseToAnyPublisher(), duration: 1500))
     }
 }

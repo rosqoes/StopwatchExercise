@@ -13,12 +13,12 @@ import Combine
 final class StopwatchExerciseTests: XCTestCase {
     var timerPublisher: AnyPublisher<Publishers.Autoconnect<Timer.TimerPublisher>.Output, Publishers.Autoconnect<Timer.TimerPublisher>.Failure>!
     var cancellable: AnyCancellable!
-    var watch: Watch!
+    var watch: WatchViewModel!
     
     override func setUp() {
         timerPublisher = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect().eraseToAnyPublisher()
         cancellable = .none
-        watch = Watch(timerPublisher: timerPublisher)
+        // watch = WatchViewModel(timerPublisher: timerPublisher)
     }
     
     func test_when_stop_after_5_seconds_should_print_2455() {
