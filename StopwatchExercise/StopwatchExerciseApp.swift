@@ -12,7 +12,7 @@ struct StopwatchExerciseApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(watch: WatchViewModel(timerPublisher: Timer.publish(every: 1.0, on: .main, in: .common).autoconnect().eraseToAnyPublisher(), duration: 1500))
         }
     }
 }
